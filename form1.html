@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Hospitalización Formulario</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-green.css">
+
+    </head>
+    <body>
+        <!-- cuerpo del formulario nota de ingreso -->
+        <form class="w3-card-4 w3-padding w3-round" id="formEntryNote">
+          <h3>Nota de Ingreso</h3>
+          <section class="w3-section">
+          <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Datos de Hospitalización</h5>
+          <div class="w3-row-padding">
+            <div class="w3-col l7">
+              <label>M&eacute;dico Tratante</label>
+              <span class="w3-input">Ruiz Ponte Mario</span>
+            </div>
+            <div class="w3-col m6 l2">
+              <label>Cama</label>
+              <span class="w3-input">007</span>
+            </div>
+            <div class="w3-col m6 l3">
+              <label>Fecha y hora de ingreso</label>
+              <span class="w3-input"><abbr title="4 día(s) de internamiento">2020-07-27 00:00</abbr></span>
+            </div>
+          </div>
+        </section>
+          <section class="w3-section">
+            <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Información inicial</h5>
+            <div class="w3-row-padding">
+              <div>
+                <label>Resumen de Antecedentes de Importancia</label>
+                <textarea class="w3-input limitable"  name="note[resumenAntecedente]" required></textarea>
+              </div>
+              <div>
+                <label>Padecimiento Actual</label>
+                <textarea class="w3-input limitable" name="note[padecimiento]" required></textarea>
+              </div>
+              <div>
+                <label>Interrogatorio de aparatos y sistemas</label>
+                <textarea class="w3-input limitable" name="note[interrogatorio]"></textarea>
+              </div>
+            </div>
+          </section>
+          <section class="w3-section">
+          <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Signos Vitales</h5>
+          <div class="w3-row-padding container-relative">
+            <div class="w3-col l2 m4">
+              <label>T/A</label>
+              <input class="w3-input" name="signosVitales[ta]" placeholder="" type="text" pattern="\d{1,3}/\d{1,3}">
+            </div>
+            <div class="w3-col l2 m4">
+              <label>F/C</label>
+              <input class="w3-input" name="signosVitales[fc]" placeholder="" type="number" min="0">
+              <span class="placeholder-units">lpm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>F/R</label>
+              <input class="w3-input" name="signosVitales[fr]" placeholder="" type="number" min="0">
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Temperatura</label>
+              <input class="w3-input" name="signosVitales[temperatura]" placeholder="" type="number" min="0" step=".1">
+              <span class="placeholder-units">°C</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Glucemia</label>
+              <input class="w3-input" name="signosVitales[glicemia]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units glcm">mg/dL</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Saturación de O<sub>2</sub></label>
+              <input class="w3-input" name="signosVitales[saturacionOxigeno]" placeholder="" type="number" min="0" step=".1">
+            </div>
+          </div>
+        </section>
+          <section class="w3-section">
+          <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Somatometria</h5>
+          <div class="w3-row-padding container-relative">
+            <div class="w3-col l2 m4">
+              <label>Peso</label>
+              <input class="w3-input" name="somatometria[peso]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">Kg</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Talla</label>
+              <input class="w3-input" name="somatometria[talla]" placeholder="" type="number" min="0" max="300" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>IMC</label>
+              <input class="w3-input" readonly name="somatometria[imc]" placeholder="">
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Grasa</label>
+              <input class="w3-input" name="somatometria[grasa]" placeholder="" type="number" min="0" max="100" step=".1">
+              <span class="placeholder-units">%</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Per. Cefálico</label>
+              <input class="w3-input" name="somatometria[perimetroCefalico]" placeholder="" type="number" min="0" step=".1">
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Cintura</label>
+              <input class="w3-input" name="somatometria[cintura]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Cadera</label>
+              <input class="w3-input" name="somatometria[cadera]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>ICC</label>
+              <input class="w3-input" readonly name="somatometria[icc]" placeholder="">
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Per. Abdominal</label>
+              <input class="w3-input" name="somatometria[perimetroAbdominal]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Per. Brazo</label>
+              <input class="w3-input" name="somatometria[perimetroBrazo]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Per. Pierna</label>
+              <input class="w3-input" name="somatometria[perimetroPierna]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Segmento Superior</label>
+              <input class="w3-input" name="somatometria[segmentoSuperior]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Segmento Inferior</label>
+              <input class="w3-input" name="somatometria[segmentoInferior]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">cm</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Peso Seco</label>
+              <input class="w3-input" name="somatometria[pesoSeco]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">Kg</span>
+            </div>
+            <div class="w3-col l2 m4">
+              <label>Superficie Corporal</label>
+              <input class="w3-input" name="somatometria[superficieCorporal]" placeholder="" type="number" min="0" max="999" step=".1">
+              <span class="placeholder-units">m<sup>2</sup></span>
+            </div>
+          </div>
+        </section>
+          <section class="w3-section">
+            <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Exploración Física</h5>
+            <div class="w3-row-padding">
+              <div>
+                <label>Habitus Exterior</label>
+                <textarea class="w3-input limitable" name="note[habitusExterior]"></textarea>
+              </div>
+              <div>
+                <label>Exploración General</label>
+                <textarea class="w3-input limitable" name="note[exploracion]" required></textarea>
+              </div>
+            </div>
+          </section>
+          <section class="w3-section">
+            <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Paraclínicos</h5>
+            <div class="w3-row-padding">
+              <div>
+                <textarea class="w3-input limitable" name="note[paraclinicos]" required></textarea>
+              </div>
+            </div>
+          </section>
+          <section class="w3-section diagnotico10-widget" data-title="Diagnostico CIE 10" data-form-id='form_cieDiez'></section>
+          <section class="w3-section diagnotico09-widget" data-title="Diagnostico CIE 09" data-form-id='testForm'></section>
+          <section class="w3-section">
+          <h5 class="w3-theme-d5 w3-center w3-round w3-padding">Pronostico</h5>
+          <div class="w3-row-padding">
+            <div class="w3-col">
+              <label>Pronostico*</label>
+              <textarea class="w3-input limitable" name="pronostico[pronostico]" required></textarea>
+            </div>
+            <div class="w3-col">
+              <label class="w3-col m4 l3">Para la vida</label>
+              <div class="w3-row-padding w3-rest">
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[vida]" value="1" {$VAR_VIDA_B}>
+                  <label>Bueno</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[vida]" value="2" {$VAR_VIDA_R}>
+                  <label>Regular</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[vida]" value="3" {$VAR_VIDA_M}>
+                  <label>Malo</label>
+                </div>
+              </div>
+            </div>
+            <div class="w3-col">
+              <label class="w3-col m4 l3">Para la funci&oacute;n</label>
+              <div class="w3-row-padding w3-rest">
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[funcion]" value="1" {$VAR_FUNCION_B}>
+                  <label>Bueno</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[funcion]" value="2" {$VAR_FUNCION_R}>
+                  <label>Regular</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[funcion]" value="3" {$VAR_FUNCION_M}>
+                  <label>Malo</label>
+                </div>
+              </div>
+            </div>
+            <div class="w3-col">
+              <label class="w3-col m4 l3">Para la estetica</label>
+              <div class="w3-row-padding w3-rest">
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[estetica]" value="1" {$VAR_ESTETICA_B}>
+                  <label>Bueno</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[estetica]" value="2" {$VAR_ESTETICA_R}>
+                  <label>Regular</label>
+                </div>
+                <div class="w3-col m4">
+                  <input class="w3-radio" type="radio" name="pronostico[estetica]" value="3" {$VAR_ESTETICA_M}>
+                  <label>Malo</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
+        
+          <section class="w3-clear">
+            <input type="submit" value="Guardar" class="w3-btn w3-button w3-right w3-theme">
+          </section>
+        </form>
+        
+        <div id="form_cieDiez" class="w3-hide">
+          <form class="w3-padding w3-white" style="max-width:960px; width:90vw;" onsubmit="return false;">
+          <div class="w3-row-padding">
+            <div class="w3-col">
+              <label>Diagnóstico C.I.E. 10</label>
+              <input type="text" placeholder="Search.." autocomplete="off" class="w3-input cie-seacher" id="search-cie-10" name="key"
+                data-uri="/complete-diagnostic/cie-diez/find" data-params="1" required>
+            </div>
+            <div class="w3-col cie-section">
+          
+            </div>
+          </div>
+        
+        
+          <div class="w3-row-padding">
+            <div class="w3-col">
+              <label>Descripción</label>
+              <textarea class="w3-input" maxlength="128" id="descripcion" name="description"></textarea>
+            </div>
+          </div>
+        
+          <div class="w3-row-padding">
+            <div class="w3-col m4">
+              <input class="w3-radio" type="radio" name="isDefinitive" id="presuntivo" value="0" label="presuntivo">
+              <label class="w3-margin-right">Presuntivo</label>
+            </div>
+            <div class="w3-col m4">
+              <input class="w3-radio" type="radio" name="isDefinitive" id="definitivo" value="1" label="definitivo">
+              <label>Definitivo</label>
+            </div>
+            <div class="w3-col m4">
+              <input class="w3-check" type="checkbox" name="isPrincipal" id="principal" value="1" label="principal">
+              <label>Principal</label>
+            </div>
+          </div>
+        
+          <div class="w3-clear w3-margin-top">
+            <a href="javascript:void(0)" class="cancel w3-margin-left w3-right w3-button w3-red">Cancelar</a>
+            <a href="javascript:void(0)" class="save w3-right w3-button w3-green">Guardar</a>
+          </div>
+        
+            <div id="cie-loader" class="w3-hide"
+              style="position:fixed; top:0; left: 0; width:100%; height:80vh; background-color: #616161c9; z-index: 1;">
+              <i class="material-icons w3-spin w3-jumbo w3-text-white w3-display-middle">autorenew</i>
+            </div>
+        
+        </form>
+        </div>
+        
+
+    </body>
+</html>
